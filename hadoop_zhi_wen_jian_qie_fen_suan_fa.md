@@ -6,9 +6,9 @@
 1. goalSize：根据用户期望的 InputSplit 数目计算出来的，即 totalSize/numSplit。 其中，totalSize 为文件的总大小；numSplit 为用户设定的 Map Task 个数，默认为1； 
 2. minSize：InputSplit 的最小值，由配置参数 mapred.min.split.size 确定，默认为1； 
 3. blockSize：文件在 HDFS 中存储的 block 大小，默认为64MB。
-这三个参数一起决定 InputSplit 的最终大小，方法如下：
+这三个参数一起决定 InputSplit 的最终大小，方法如下：<br/>
 ```splitSize = max{minSize, min{goalSize, blockSize}}```
-在新方法中，InputSplit 的划分不再考虑用户指定的 Map Task 个数，用 mapred.max.split.size 替代，记为 maxSize。计算公式如下：
+在新方法中，InputSplit 的划分不再考虑用户指定的 Map Task 个数，用 mapred.max.split.size 替代，记为 maxSize。计算公式如下：<br/>
 ```splitSize = max{minSize, min{maxSize, blockSize}}```
 
 
