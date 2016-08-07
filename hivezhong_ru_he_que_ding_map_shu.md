@@ -8,12 +8,12 @@ Hive 是基于 Hadoop的一个数据仓库工具，可以将结构化的数据�
 hive 默认的 input format
 在 cdh-4.3.0 的 hive 中查看 hive.input.format 值（为什么是hive.input.format？）：
 
-hive> set hive.input.format;
-hive.input.format=org.apache.hadoop.hive.ql.io.CombineHiveInputFormat;
+```hive> set hive.input.format;
+hive.input.format=org.apache.hadoop.hive.ql.io.CombineHiveInputFormat;```
 可以看到默认值为 CombineHiveInputFormat，如果你使用的是 IDH 的hive，则默认值为：
 
-hive> set hive.input.format;
-hive.input.format=org.apache.hadoop.hive.ql.io.HiveInputFormat;
+```hive> set hive.input.format;
+hive.input.format=org.apache.hadoop.hive.ql.io.HiveInputFormat;```
 CombineHiveInputFormat 类继承自 HiveInputFormat，而 HiveInputFormat 实现了 org.apache.hadoop.mapred.InputFormat 接口，关于 InputFormat 的分析，可以参考Hadoop深入学习：InputFormat组件.
 
 InputFormat 接口功能
@@ -25,10 +25,10 @@ InputFormat 接口功能
 
 该类接口定义如下：
 
-public interface InputFormat<K,V>{
+```public interface InputFormat<K,V>{
 	public InputSplit[] getSplits(JobConf job,int numSplits) throws IOException; 
 	public RecordReader<K,V> getRecordReader(InputSplit split,JobConf job,Reporter reporter) throws IOException; 
-}
+}```
 其中，getSplit() 方法主要用于切分数据，每一份数据由，split 只是在逻辑上对数据分片，并不会在磁盘上将数据切分成 split 物理分片，实际上数据在 HDFS 上还是以 block 为基本单位来存储数据的。InputSplit 只记录了 Mapper 要处理的数据的元数据信息，如起始位置、长度和所在的节点。
 
 MapReduce 自带了一些 InputFormat 的实现类：
@@ -37,7 +37,7 @@ InputFormat实现类
 
 hive 中有一些 InputFormat 的实现类，如：
 
-AvroContainerInputFormat
+```AvroContainerInputFormat
 RCFileBlockMergeInputFormat
 RCFileInputFormat
 FlatFileInputFormat
@@ -45,7 +45,7 @@ OneNullRowInputFormat
 ReworkMapredInputFormat
 SymbolicInputFormat
 SymlinkTextInputFormat
-HiveInputFormat
+HiveInputFormat```
 HiveInputFormat 的子类有：
 
 HiveInputFormat的子类
@@ -53,7 +53,7 @@ HiveInputFormat的子类
 HiveInputFormat
 以 HiveInputFormat 为例，看看其getSplit()方法逻辑：
 
-for (Path dir : dirs) {
+```for (Path dir : dirs) {
   PartitionDesc part = getPartitionDescFromPath(pathToPartitionInfo, dir);
   // create a new InputFormat instance if this is the first time to see this
   // class
@@ -78,13 +78,13 @@ for (Path dir : dirs) {
   for (InputSplit is : iss) {
     result.add(new HiveInputSplit(is, inputFormatClass.getName()));
   }
-}
+}```
 上面代码主要过程是：
 
 遍历每个输入目录，然后获得 PartitionDesc 对象，从该对象调用 getInputFileFormatClass 方法得到实际的 InputFormat 类，并调用其 getSplits(newjob, numSplits / dirs.length) 方法。
 按照上面代码逻辑，似乎 hive 中每一个表都应该有一个 InputFormat 实现类。在 hive 中运行下面代码，可以查看建表语句：
 
-hive> show create table info; 
+```hive> show create table info; 
 OK
 CREATE  TABLE info(
   statist_date string, 
@@ -112,13 +112,13 @@ TBLPROPERTIES (
   'transient_lastDdlTime'='1378245263', 
   'numRows'='0', 
   'totalSize'='301240320', 
-  'rawDataSize'='0')
+  'rawDataSize'='0')```
 Time taken: 0.497 seconds
 从上面可以看到 info 表的 INPUTFORMAT 为org.apache.hadoop.mapred.TextInputFormat，TextInputFormat 继承自FileInputFormat。FileInputFormat 是一个抽象类，它最重要的功能是为各种 InputFormat 提供统一的 getSplits()方法，该方法最核心的是文件切分算法和 Host 选择算法。
 
 算法如下：
 
-long length = file.getLen();
+```long length = file.getLen();
 long goalSize = totalSize / (numSplits == 0 ? 1 : numSplits);
 long minSize = Math.max(job.getLong(org.apache.hadoop.mapreduce.lib.input.
 FileInputFormat.SPLIT_MINSIZE, 1), minSplitSize);
@@ -132,7 +132,7 @@ String[] splitHosts = getSplitHosts(blkLocations,
 	splits.add(makeSplit(path, length-bytesRemaining, splitSize, 
 		       splitHosts));
 	bytesRemaining -= splitSize;
-}
+}```
 华丽的分割线：以下摘抄自Hadoop深入学习：InputFormat组件
 
 1）文件切分算法
@@ -176,7 +176,7 @@ CombineFileInputFormatShim combine = ShimLoader.getHadoopShims().getCombineFileI
 			HadoopShimsSecure.getCombineFileInputFormat()
 CombineFileInputFormatShim 继承了org.apache.hadoop.mapred.lib.CombineFileInputFormat，CombineFileInputFormatShim 的 getSplits 方法代码如下：
 
-public InputSplitShim[] getSplits(JobConf job, int numSplits) throws IOException {
+```public InputSplitShim[] getSplits(JobConf job, int numSplits) throws IOException {
   long minSize = job.getLong("mapred.min.split.size", 0);
 
   // For backward compatibility, let the above parameter be used
@@ -200,7 +200,7 @@ public InputSplitShim[] getSplits(JobConf job, int numSplits) throws IOException
   }
 
   return isplits;
-}
+}```
 从上面代码可以看出，如果为 CombineHiveInputFormat，则以下四个参数起作用：
 
 mapred.min.split.size 或者 mapreduce.input.fileinputformat.split.minsize。
@@ -209,7 +209,7 @@ mapred.min.split.size.per.rack 或者 mapreduce.input.fileinputformat.split.mins
 mapred.min.split.size.per.node 或者 mapreduce.input.fileinputformat.split.minsize.per.node。
 CombineFileInputFormatShim 的 getSplits 方法最终会调用父类的 getSplits 方法，拆分算法如下：
 
-long left = locations[i].getLength();
+```long left = locations[i].getLength();
 long myOffset = locations[i].getOffset();
 long myLength = 0;
 do {
@@ -229,7 +229,7 @@ do {
 	myOffset += myLength;
 
 	blocksList.add(oneblock);
-} while (left > 0);
+} while (left > 0);```
 hive 中如何确定 map 数
 总上总结如下：
 
