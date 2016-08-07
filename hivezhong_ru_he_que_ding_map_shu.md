@@ -1,6 +1,6 @@
 # Hive中如何确定map数
 
-参考：　http://blog.javachen.com/2013/09/04/how-to-decide-map-number.html
+参考：　http://blog.javachen.com/2013/09/04/how-to-decide-map-number.html<br/>
 Hive 是基于 Hadoop的一个数据仓库工具，可以将结构化的数据文件映射为一张数据库表，并提供完整的 sql 查询功能，可以将 sq l语句转换为 MapReduce 任务进行运行。当运行一个 hql 语句的时候，map 数是如何计算出来的呢？有哪些方法可以调整 map 数呢？
 
 本文测试集群版本：cdh-4.3.0 。
