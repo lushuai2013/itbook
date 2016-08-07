@@ -9,5 +9,5 @@
 * [Hadoop](hadoop.md)
    * [Hadoop 之 文件切分算法](hadoop_zhi_wen_jian_qie_fen_suan_fa.md)
    * [Hadoop中map数的计算](hadoopzhong_map_shu_de_ji_suan.md)
-   * Hive中如何确定map数
+   * [Hive中如何确定map数](hivezhong_ru_he_que_ding_map_shu.md)
 
