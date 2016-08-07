@@ -7,4 +7,5 @@
 * 网络
    * [linux proc](linux_proc.md)
 * [Hadoop](hadoop.md)
+   * Hadoop 之 文件切分算法
 
