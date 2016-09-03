@@ -16,4 +16,5 @@
    * [Spark 1.6.1测试环境 部署](spark_161ce_shi_huan_jing_bu_shu.md)
 * [kylin](kylin.md)
    * Apache Kylin参考
+* flume
 
