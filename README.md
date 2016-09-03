@@ -15,6 +15,6 @@ CPU 以及CPU0。。。的每行的每个参数意思（以第一行为例）为
     Drs(pages) 程序数据段和用户态的栈的大小 （VmData+ VmStk ）4
     dt(pages) 0 
 
-
+例如统计namenode占用内存大小: cat /proc/namenode_pid/statm | awk '{print $2*4/1024"M"}'
 ---
 
