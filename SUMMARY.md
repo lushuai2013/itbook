@@ -17,5 +17,5 @@
 * [kylin](kylin.md)
    * Apache Kylin参考
 * [flume](flume.md)
-   * 基于Flume的美团日志收集系统(一)架构和设计
+   * [基于Flume的美团日志收集系统(一)架构和设计](ji_yuflume_de_mei_tuan_ri_zhi_shou_ji_xi_7edf28_4e.md)
 
