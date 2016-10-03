@@ -2,7 +2,7 @@
 
 
 参考：http://www.inter12.org/archives/834
-一 PRODUCER的API
+##一 PRODUCER的API
 1.Producer的创建，依赖于ProducerConfig
 public Producer(ProducerConfig config);
 2.单个或是批量的消息发送
@@ -10,7 +10,7 @@ public void send(KeyedMessage<K,V> message);
 public void send(List<KeyedMessage<K,V>> messages);
 3.关闭Producer到所有broker的连接
 public void close();
-二 CONSUMER的高层API
+##二 CONSUMER的高层API
 主要是Consumer和ConsumerConnector，这里的Consumer是ConsumerConnector的静态工厂类
 class Consumer {
 public static kafka.javaapi.consumer.ConsumerConnector createJavaConsumerConnector(config: ConsumerConfig);
@@ -31,7 +31,7 @@ public void commitOffsets();
 关闭消费者
 public void shutdown();
 高层的API中比较常用的就是public List<KafkaStream<byte[], byte[]>> createMessageStreamsByFilter(TopicFilter topicFilter);和public void commitOffsets();
-三 CONSUMER的简单API–SIMPLECONSUMER
+##三 CONSUMER的简单API–SIMPLECONSUMER
 批量获取消息
 public FetchResponse fetch(request: kafka.javaapi.FetchRequest);
 获取topic的元信息
