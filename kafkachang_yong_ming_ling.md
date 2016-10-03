@@ -31,4 +31,4 @@ $ /opt/cloudera/parcels/CDH/lib/zookeeper/bin/zkCli.sh
 set /consumers/group-1/offsets/page_visits/0 128
 注意如果你的kafka设置了zookeeper root，比如为/kafka，那么命令应该改为：
 
-set /consumers/group-1/offsets/page_visits/0 128
+set /kafka/consumers/group-1/offsets/page_visits/0 128
