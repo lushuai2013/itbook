@@ -1,5 +1,4 @@
 # kafka设计核心思想
-参考：http://blog.csdn.net/itleochen/article/details/18352797
 
 
 Kafka是2010年12月份开源的项目，采用Scala语言编写，使用了多种效率优化机制，整体架构比较新颖（push/pull），更适合异构集群。
