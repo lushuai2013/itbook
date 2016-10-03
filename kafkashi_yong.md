@@ -35,7 +35,7 @@ public class WordCountDemo {
 
         // setting offset reset to earliest so that we can re-run the demo code with the same pre-loaded data
         props.put(ConsumerConfig.AUTO_OFFSET_RESET_CONFIG, "earliest");
-
+备注
         KStreamBuilder builder = new KStreamBuilder();
 
         KStream<String, String> source = builder.stream("streams-file-input");
@@ -136,12 +136,12 @@ public class WordCountProcessorDemo {
                 public void close() {
                     this.kvStore.close();
                 }
-            };
+            };备注
         }
     }
 
     public static void main(String[] args) throws Exception {
-        Properties props = new Properties();
+        Properties props = new Properties();备注
         props.put(StreamsConfig.APPLICATION_ID_CONFIG, "streams-wordcount-processor");
         props.put(StreamsConfig.BOOTSTRAP_SERVERS_CONFIG, "localhost:9092");
         props.put(StreamsConfig.ZOOKEEPER_CONNECT_CONFIG, "localhost:2181");

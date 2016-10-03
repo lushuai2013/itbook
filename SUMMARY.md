@@ -22,6 +22,6 @@
    * [参考文章](can_kao_wen_zhang.md)
 * [idea使用](ideashi_yong.md)
    * [kafka使用](kafkashi_yong.md)
-   * kafka设计核心思想
+   * [kafka设计核心思想](kafkashe_ji_he_xin_si_xiang.md)
 * kafka
 
