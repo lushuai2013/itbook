@@ -10,3 +10,5 @@
    
    ###2. kafka源码demo解析
    
+参考[使用Kafka Stream处理数据](http://www.orchome.com/300) 示例介绍了WordCountDemo的读取topic的数据并发计算结果写出到另一个topic中。
+源码一（高级API）：
