@@ -25,5 +25,5 @@
    * [kafka常用命令](kafkachang_yong_ming_ling.md)
 * [kafka使用](kafkashi_yong.md)
 * [kafka设计核心思想](kafkashe_ji_he_xin_si_xiang.md)
-* kafka
+* [kafka](kafka.md)
 
