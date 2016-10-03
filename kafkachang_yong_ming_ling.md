@@ -10,14 +10,14 @@
 ####查询topic的offset的范围
 用下面命令可以查询到topic:page_visits broker:localhost:9092的offset的最小值：
 
-```/bin/kafka-run-class.sh kafka.tools.GetOffsetShell --broker-list SparkMaster:9092 —topic page_visits --time -2
+```/bin/kafka-run-class.sh kafka.tools.GetOffsetShell --broker-list localhost:9092 —topic page_visits --time -2
 输出： DynamicRange:0:10
 
 
 从上面的输出可以看出topic:DynamicRange只有一个partition:0 offset范围为:[10,128]
 
 查询offset的最大值：
-bin/kafka-run-class.sh kafka.tools.GetOffsetShell --broker-list SparkMaster:9092 —topic page_visits --time -1
+bin/kafka-run-class.sh kafka.tools.GetOffsetShell --broker-list localhost:9092 —topic page_visits --time -1
 输出：DynamicRange:0:128```
 
 ####重置kafka的 offset
@@ -26,9 +26,9 @@ bin/kafka-run-class.sh kafka.tools.GetOffsetShell --broker-list SparkMaster:9092
 启动zookeeper client
 
 $ /opt/cloudera/parcels/CDH/lib/zookeeper/bin/zkCli.sh
-通过下面命令设置consumer group:DynamicRangeGroup topic:DynamicRange partition:0的offset为1288:
+通过下面命令设置consumer group:DynamicRangeGroup topic:localhost partition:10的offset为128:
 
-set /consumers/DynamicRangeGroup/offsets/DynamicRange/0 1288
+set /consumers/group-1/offsets/page_visits/0 128
 注意如果你的kafka设置了zookeeper root，比如为/kafka，那么命令应该改为：
 
-set /kafka/consumers/DynamicRangeGroup/offsets/DynamicRange/0 1288
+set /kafka/consumers/group-1/offsets/page_visits/0 1288
