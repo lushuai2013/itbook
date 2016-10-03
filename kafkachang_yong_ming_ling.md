@@ -14,6 +14,8 @@
 输出： DynamicRange:0:10
 
 
+从上面的输出可以看出topic:DynamicRange只有一个partition:0 offset范围为:[10,128]
+
 查询offset的最大值：
 bin/kafka-run-class.sh kafka.tools.GetOffsetShell --broker-list SparkMaster:9092 —topic page_visits --time -1
 输出：DynamicRange:0:128```
