@@ -27,5 +27,5 @@
    * [kafka使用](kafkashi_yong.md)
    * [kafka参数介绍](kafkacan_shu_jie_shao.md)
    * [Kafka Consumer接口](kafka_consumerjie_kou.md)
-   * 分布式消息队列kafka系列介绍 — 核心API介绍及实例
+   * [分布式消息队列kafka系列介绍 — 核心API介绍及实例](fen_bu_shi_xiao_xi_dui_lie_kafka_xi_lie_jie_shao__.md)
 
