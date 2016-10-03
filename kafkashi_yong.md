@@ -1,4 +1,4 @@
-# kafka使用
+[](https://www.jetbrains.com/help/idea/2016.2/gradle.html)# kafka使用
 
 
 ### 1. kafka源码导入idea环境
