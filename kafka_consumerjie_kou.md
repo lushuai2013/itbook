@@ -1,5 +1,60 @@
 # Kafka Consumer接口
 
+
+1. Kafka提供了两种Consumer API
+High Level Consumer API
+Low Level Consumer API(Kafka诡异的称之为Simple Consumer API，实际上非常复杂)
+在选用哪种Consumer API时，首先要弄清楚这两种API的工作原理，能做什么不能做什么，能做的话怎么做的以及用的时候，有哪些可能的问题
+ 
+2. High Level Consumer API概述
+High Level Consumer API围绕着Consumer Group这个逻辑概念展开，它屏蔽了每个Topic的每个Partition的Offset管理（自动读取zookeeper中该Consumer group的last offset ）、Broker失败转移以及增减Partition、Consumer时的负载均衡(当Partition和Consumer增减时，Kafka自动进行负载均衡）
+对于多个Partition，多个Consumer
+如果consumer比partition多，是浪费，因为kafka的设计是在一个partition上是不允许并发的，所以consumer数不要大于partition数
+如果consumer比partition少，一个consumer会对应于多个partitions，这里主要合理分配consumer数和partition数，否则会导致partition里面的数据被取的不均匀。最好partiton数目是consumer数目的整数倍，所以partition数目很重要，比如取24，就很容易设定consumer数目
+如果consumer从多个partition读到数据，不保证数据间的顺序性，kafka只保证在一个partition上数据是有序的，但多个partition，根据你读的顺序会有不同
+增减consumer，broker，partition会导致rebalance，所以rebalance后consumer对应的partition会发生变化
+High-level接口中获取不到数据的时候是会block的
+关于Offset初始值的问题：
+先produce一些数据，然后再用consumer读的话，需要加上一句offset读取设置
+ 
+Java代码  收藏代码
+props.put("auto.offset.reset", "smallest"); //必须要加，如果要读旧数据  
+ 
+因为初始的offset默认是非法的，然后这个设置的意思 是，当offset非法时，如何修正offset，默认是largest，即最新，所以不加这个配置，你是读不到你之前produce的数据的，而且这个 时候你再加上smallest配置也没用了，因为此时offset是合法的，不会再被修正了，需要手工或用工具改重置offset
+ 
+ 
+ 
+3. Low Level Consumer API概述
+3.1Low Level Consumer API控制灵活性
+Low Level Consumer API，作为底层的Consumer API，提供了消费Kafka Message更大的控制，如：
+Read a message multiple times(重复读取）
+Consume only a subset of the partitions in a topic in a process（跳读）
+Manage transactions to make sure a message is processed once and only once（Exactly Once原语）
+3.2 Low Level Consumer API的复杂性
+软件没有银弹，Low Level Consumer API提供更大灵活控制是以复杂性为代价的：
+Offset不再透明
+Broker自动失败转移需要处理
+增加Consumer、Partition、Broker需要自己做负载均衡
+ 
+You must keep track of the offsets in your application to know where you left off consuming.（Offset自己管理）
+You must figure out which Broker is the lead Broker for a topic and partition(如果一个Partition有多个副本，那么Lead Partition所在的Broker就称为这个Partition的Lead Broker)
+You must handle Broker leader changes（Broker Leader是个什么概念）
+3.3 使用Low Level Consumer API的步骤
+Find an active Broker and find out which Broker is the leader for your topic and partition
+Determine who the replica Brokers are for your topic and partition
+Build the request defining what data you are interested in
+Fetch the data
+Identify and recover from leader changes
+
+
+
+---
+
+
+
+
+
+
 对于kafka的consumer接口，提供两种版本，
 
  
