@@ -32,3 +32,33 @@ set /consumers/group-1/offsets/page_visits/0 128
 注意如果你的kafka设置了zookeeper root，比如为/kafka，那么命令应该改为：
 
 set /kafka/consumers/group-1/offsets/page_visits/0 128
+
+###在用high-level的consumer时，两个给力的工具，
+
+1. bin/kafka-run-class.sh kafka.tools.ConsumerOffsetChecker --group pv
+
+可以看到当前group offset的状况，比如这里看pv的状况，3个partition
+
+Group           Topic                          Pid Offset          logSize         Lag             Owner 
+pv              page_visits                    0   21              21              0               none 
+pv              page_visits                    1   19              19              0               none 
+pv              page_visits                    2   20              20              0               none
+
+关键就是offset，logSize和Lag 
+这里以前读完了，所以offset=logSize，并且Lag=0
+
+2. bin/kafka-run-class.sh kafka.tools.UpdateOffsetsInZK earliest config/consumer.properties  page_visits
+
+3个参数， 
+[earliest | latest]，表示将offset置到哪里 
+consumer.properties ，这里是配置文件的路径 
+topic，topic名，这里是page_visits
+
+我们对上面的pv group执行完这个操作后，再去check group offset状况，结果如下，
+
+Group           Topic                          Pid Offset          logSize         Lag             Owner 
+pv              page_visits                    0   0               21              21              none 
+pv              page_visits                    1   0               19              19              none 
+pv              page_visits                    2   0               20              20              none
+
+可以看到offset已经被清0，Lag=logSize
