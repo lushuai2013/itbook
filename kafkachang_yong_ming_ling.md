@@ -9,8 +9,10 @@
 
 ####查询topic的offset的范围
 用下面命令可以查询到topic:page_visits broker:localhost:9092的offset的最小值：
+
 ```/bin/kafka-run-class.sh kafka.tools.GetOffsetShell --broker-list SparkMaster:9092 —topic page_visits --time -2
 输出： DynamicRange:0:10
+
 
 查询offset的最大值：
 bin/kafka-run-class.sh kafka.tools.GetOffsetShell --broker-list SparkMaster:9092 —topic page_visits --time -1
