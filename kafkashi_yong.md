@@ -1,4 +1,4 @@
-[](https://www.jetbrains.com/help/idea/2016.2/gradle.html)# kafka基础备注
+[](https://www.jetbrains.com/help/idea/2016.2/gradle.html)# kafka基础知识总结
 
 
 ### 1. kafka源码导入idea环境
@@ -58,7 +58,7 @@ public class WordCountDemo {
         // need to override value serde to Long type
         counts.to(Serdes.String(), Serdes.Long(), "streams-wordcount-output");
 
-        KafkaStreams streams = new KafkaStreams(builder, props);
+        KafkaStreams streams = new KafkaStreams(builder, props);beizhu
         streams.start();
 
         // usually the stream application would be running forever,
