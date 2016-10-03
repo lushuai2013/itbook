@@ -1,0 +1,2 @@
+# Kafka Consumer接口
+
