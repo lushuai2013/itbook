@@ -23,8 +23,8 @@
 * [idea使用](ideashi_yong.md)
    * [kafka参数介绍](kafkacan_shu_jie_shao.md)
    * [kafka常用命令](kafkachang_yong_ming_ling.md)
-* [kafka设计核心思想](kafkashe_ji_he_xin_si_xiang.md)
 * [kafka使用](kafkashi_yong.md)
+* [kafka设计核心思想](kafkashe_ji_he_xin_si_xiang.md)
 * Kafka Consumer接口
 * [kafka](kafka.md)
    * Kafka Consumer接口
