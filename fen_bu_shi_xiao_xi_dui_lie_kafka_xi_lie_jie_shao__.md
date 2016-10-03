@@ -45,3 +45,5 @@ public void close();
 提供了一个可水平伸缩的解决方案来结合hadoop的使用参见
 https://github.com/linkedin/camus/tree/camus-kafka-0.8/
 
+实战参考原文：http://www.inter12.org/archives/834
+
