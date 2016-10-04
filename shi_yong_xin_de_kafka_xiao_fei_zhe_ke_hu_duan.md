@@ -1,5 +1,7 @@
 # 使用新的Kafka消费者客户端
 
+
+##新kafka消费者客户端原理接demo介绍
 参考：http://zqhxuyuan.github.io/2016/02/20/Kafka-Consumer-New/
 
 
@@ -13,3 +15,9 @@ Kafka可以自行维护Offset、消费者的Position。也可以开发者自己�
 自行控制Consumer消费消息的位置。
 可以使用多线程进行消费
 Kafka 0.9这个版本，大的变化主要就是上面三点了。不过对于这个版本的稳定性还有待在实际使用中进行观察。通过在JIRA中查看，目前这个版本的Bug只帖出了一个，估计跟没有大规模的被用户使用有关。如果小伙伴们在使用过程中有什么心得体会，欢迎在博客下面留言分享！
+
+##Kafka学习整理七(producer和consumer编程实践)
+参考  
+http://www.tiandiyao.com/it107/000097MYM032082/
+
+
