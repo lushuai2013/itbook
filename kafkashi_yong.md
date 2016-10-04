@@ -171,3 +171,5 @@ public class WordCountProcessorDemo {
     }
 }
 ```
+###kakfa使用low consumer api，自动提交offset
+参考 http://www.programcreek.com/java-api-examples/index.php?api=kafka.javaapi.OffsetCommitResponse
