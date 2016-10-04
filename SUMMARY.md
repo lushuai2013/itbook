@@ -32,5 +32,5 @@
    * [分布式消息队列kafka系列介绍 — 核心API介绍及实例](fen_bu_shi_xiao_xi_dui_lie_kafka_xi_lie_jie_shao__.md)
    * [使用新的Kafka消费者客户端](shi_yong_xin_de_kafka_xiao_fei_zhe_ke_hu_duan.md)
    * [Kafka 0.9 新特性介绍](kafka_09_xin_te_xing_jie_shao.md)
-   * kafka入门介绍
+   * [kafka入门介绍](kafkaru_men_jie_shao.md)
 
