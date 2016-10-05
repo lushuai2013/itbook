@@ -37,5 +37,5 @@
    * [Kafka源码分析](kafkayuan_ma_fen_xi.md)
 * [scala](scala.md)
    * [SBT 手册](sbt_shou_ce.md)
-   * Getting Started with Scala in IntelliJ IDEA 14.1
+   * [Getting Started with Scala in IntelliJ IDEA 14.1](getting_started_with_scala_in_intellij_idea_141.md)
 
