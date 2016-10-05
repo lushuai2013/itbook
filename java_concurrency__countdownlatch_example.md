@@ -18,3 +18,12 @@ CountDownLatch was introduced with JDK 1.5 along with other concurrent utilities
 CountDownLatch works by having a counter initialized with number of threads, which is decremented each time a thread complete its execution. When count reaches to zero, it means all threads have completed their execution, and thread waiting on latch resume the execution.
 
 ![](CountdownLatch_example.png)
+
+Pseudo code for CountDownLatch can be written like this:
+
+//Main thread start
+//Create CountDownLatch for N threads
+//Create and start N threads
+//Main thread wait on latch
+//N threads completes there tasks are returns
+//Main thread resume execution
