@@ -36,4 +36,5 @@
    * [kafka入门介绍](kafkaru_men_jie_shao.md)
    * [Kafka源码分析](kafkayuan_ma_fen_xi.md)
 * [scala](scala.md)
+   * SBT 手册
 
