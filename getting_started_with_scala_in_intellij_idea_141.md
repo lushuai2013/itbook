@@ -2,3 +2,4 @@
 
 
 参考： http://nanxiao.me/en/getting-started-with-scala-in-intellij-idea-14-1/
+
