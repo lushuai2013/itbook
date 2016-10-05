@@ -1,13 +1,13 @@
 # Summary
 
 * [Introduction](README.md)
+   * [MySQL重设root密码](mysqlzhong_she_root_mi_ma.md)
    * [idea使用](ideashi_yong.md)
    * [地址收藏](di_zhi_shou_cang.md)
    * 总结
    * [maven](mven.md)
    * [slf4j总结](slf4jzong_jie.md)
 * [Java多线程](javaduo_xian_cheng.md)
-   * [MySQL重设root密码](mysqlzhong_she_root_mi_ma.md)
    * [Java concurrency – CountDownLatch Example](java_concurrency__countdownlatch_example.md)
 * [性能测试](xing_neng_ce_shi.md)
    * [性能测试总结](xing_neng_ce_shi_zong_jie.md)
