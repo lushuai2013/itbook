@@ -1,6 +1,7 @@
 # Summary
 
 * [Introduction](README.md)
+   * [idea使用](ideashi_yong.md)
    * [地址收藏](di_zhi_shou_cang.md)
    * 总结
    * [maven](mven.md)
@@ -23,7 +24,6 @@
 * [flume](flume.md)
    * [基于Flume的美团日志收集系统(一)架构和设计](ji_yuflume_de_mei_tuan_ri_zhi_shou_ji_xi_7edf28_4e.md)
    * [参考文章](can_kao_wen_zhang.md)
-* [idea使用](ideashi_yong.md)
 * [kafka](kafka.md)
    * [kafka设计核心思想](kafkashe_ji_he_xin_si_xiang.md)
    * [kafka常用命令](kafkachang_yong_ming_ling.md)
