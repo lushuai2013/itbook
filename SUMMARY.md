@@ -35,5 +35,5 @@
    * [Kafka 0.9 新特性介绍](kafka_09_xin_te_xing_jie_shao.md)
    * [kafka入门介绍](kafkaru_men_jie_shao.md)
    * [Kafka源码分析](kafkayuan_ma_fen_xi.md)
-* scala
+* [scala](scala.md)
 
