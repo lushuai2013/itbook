@@ -21,7 +21,7 @@ CountDownLatch works by having a counter initialized with number of threads, whi
 
 Pseudo code for CountDownLatch can be written like this:
 
-//Main thread start</br>
+//Main thread start<br>
 //Create CountDownLatch for N threads<br/>
 //Create and start N threads<br/>
 //Main thread wait on latch<br/>
