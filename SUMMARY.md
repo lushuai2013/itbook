@@ -34,4 +34,5 @@
    * [使用新的Kafka消费者客户端](shi_yong_xin_de_kafka_xiao_fei_zhe_ke_hu_duan.md)
    * [Kafka 0.9 新特性介绍](kafka_09_xin_te_xing_jie_shao.md)
    * [kafka入门介绍](kafkaru_men_jie_shao.md)
+   * Kafka源码分析
 
