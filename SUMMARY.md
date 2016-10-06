@@ -40,5 +40,5 @@
    * [Getting Started with Scala in IntelliJ IDEA 14.1](getting_started_with_scala_in_intellij_idea_141.md)
 * [linux](linux.md)
    * [监控 Linux 性能的 18 个命令行工具](jian_kong_linux_xing_neng_de_18_ge_ming_ling_xing_.md)
-   * ssh连接远程主机执行脚本的环境变量问题
+   * [ssh连接远程主机执行脚本的环境变量问题](sshlian_jie_yuan_cheng_zhu_ji_zhi_xing_jiao_ben_de.md)
 
