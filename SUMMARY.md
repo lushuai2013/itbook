@@ -39,4 +39,5 @@
    * [SBT 手册](sbt_shou_ce.md)
    * [Getting Started with Scala in IntelliJ IDEA 14.1](getting_started_with_scala_in_intellij_idea_141.md)
 * [linux](linux.md)
+   * 监控 Linux 性能的 18 个命令行工具
 
