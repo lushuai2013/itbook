@@ -23,7 +23,7 @@
    * [Spark 运维实战](spark_yun_wei_shi_zhan.md)
    * [Spark开发指南](sparkkai_fa_zhi_nan.md)
    * [spark总结](sparkzong_jie.md)
-   * Spark On YARN 集群安装部署
+   * [Spark On YARN 集群安装部署](spark_on_yarn_ji_qun_an_zhuang_bu_shu.md)
 * [kylin](kylin.md)
    * Apache Kylin参考
 * [flume](flume.md)
