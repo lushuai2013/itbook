@@ -22,6 +22,7 @@
    * [Spark 1.6.1测试环境 部署](spark_161ce_shi_huan_jing_bu_shu.md)
    * [Spark 运维实战](spark_yun_wei_shi_zhan.md)
    * [Spark开发指南](sparkkai_fa_zhi_nan.md)
+   * spark总结
 * [kylin](kylin.md)
    * Apache Kylin参考
 * [flume](flume.md)
