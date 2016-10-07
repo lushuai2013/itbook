@@ -1,4 +1,4 @@
-z# spark测试用例
+# spark测试用例
 
 
 ###1.运行 Spark 示例
@@ -33,6 +33,8 @@ textFile.map(line => line.split(" ").size).reduce((a, b) => if (a > b) a else b)
 
 ####spark
 val wordcount=textfile.flatMap(line=>line.split(" ")).map(word=> (word,1)).reduceByKey((a,b)=>(a+b))
+wordcount.collect()
+
 
  
  
