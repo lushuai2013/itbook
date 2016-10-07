@@ -12,3 +12,4 @@ spark.eventLog.compress	false	是否压缩事件日志。需要spark.eventLog.en
 spark.eventLog.dir	file:///tmp/spark-events	Spark事件日志记录的基本目录。在这个基本目录下，Spark为每个应用程序创建一个子目录。各个应用程序记录日志到直到的目录。用户可能想设置这为统一的地点，像HDFS一样，所以历史文件可以通过历史服务器读取<br/>
 spark.eventLog.enabled	false	是否记录Spark的事件日志。这在应用程序完成后，重新构造web UI是有用的
 属性参考：http://blog.javachen.com/2015/06/07/spark-configuration.html
+
