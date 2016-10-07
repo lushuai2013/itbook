@@ -25,6 +25,9 @@ sort用法：<br/>
 head -1 为：取第一条记录
 
 ####spark
+textFile.map(line => line.split(" ").size).reduce((a, b) => if (a > b) a else b)
+
+
 
 
  
