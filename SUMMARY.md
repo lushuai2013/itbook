@@ -25,6 +25,7 @@
    * [spark总结](sparkzong_jie.md)
    * [Spark On YARN 集群安装部署](spark_on_yarn_ji_qun_an_zhuang_bu_shu.md)
    * [Spark配置参数](sparkpei_zhi_can_shu.md)
+   * Spark快速入门指南 – Spark安装与基础使用
 * [kylin](kylin.md)
    * Apache Kylin参考
 * [flume](flume.md)
