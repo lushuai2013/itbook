@@ -28,7 +28,11 @@ head -1 为：取第一条记录
 textFile.map(line => line.split(" ").size).reduce((a, b) => if (a > b) a else b)
 
 
+###wordcount
+####awk
 
+####spark
+val wordcount=textfile.flatMap(line=>line.split(" ")).map(word=> (word,1)).reduceByKey((a,b)=>(a+b))
 
  
  
