@@ -8,5 +8,8 @@ z# spark测试用例
  2. 使用spark-submit提交python 版SparkPi
  sh spark-submit --master yarn --deploy-mode client ../examples/src/main/python/pi.py```
  
+ 3.使用awk和spark统计文本文件每行出现单词最多行的单词数
+
+cat README.md| awk '{lens=split($0,as," ");print lens;}' |sort -nr|head -1
  
  
