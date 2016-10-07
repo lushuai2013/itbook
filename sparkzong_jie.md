@@ -6,3 +6,5 @@ https://taoistwar.gitbooks.io/spark-operationand-maintenance-management/content/
 ###2.spark-shell yarn client 
 16/10/07 16:23:05 ERROR spark.SparkContext: Error initializing SparkContext.
 java.io.FileNotFoundException: File file:/tmp/spark-events does not exist
+
+
