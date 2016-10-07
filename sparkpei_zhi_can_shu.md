@@ -1,4 +1,4 @@
-# Spark配置参# Spark配置参fa数
+# Spark配置参数
 
 官网spark配置参
 
