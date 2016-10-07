@@ -9,7 +9,13 @@ z# spark测试用例
  sh spark-submit --master yarn --deploy-mode client ../examples/src/main/python/pi.py```
  
  3.使用awk和spark统计文本文件每行出现单词最多行的单词数
-
+awk：
 cat README.md| awk '{lens=split($0,as," ");print lens;}' |sort -nr|head -1
+
+split用法:The awk function split(s,a,sep) splits a string s into an awk array a using the delimiter sep.<br/>
+set time = 12:34:56<br/>
+set hr = `echo $time | awk '{split($0,a,":" ); print a[1]}'` # = 12<br/>
+set sec = `echo $time | awk '{split($0,a,":" ); print a[3]}'` # = 56<br/>
+
  
  
