@@ -7,3 +7,10 @@ http://www.powerxing.com/spark-quick-start-guide/
   
 3.使用IDEA开发Spark应用
 http://debugo.com/idea-spark/ <br/>
+
+
+------
+
+#storm
+1. Apache Storm技术实战之1 -- WordCountTopology
+ http://www.cnblogs.com/hseagle/p/3505938.html 
