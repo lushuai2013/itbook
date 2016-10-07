@@ -30,6 +30,12 @@ textFile.map(line => line.split(" ").size).reduce((a, b) => if (a > b) a else b)
 
 ###wordcount
 ####awk
+cat anyfile.txt|awk -F " " '{for(i=1;i<=NF;i++) a[$i]++} END {for(k in a) print k,a[k]}'
+
+-F " " 以空格分割单词<br/>
+NF  在awk中大家都知道NF的作用，它是一个awk的内建变量，代表是每行的字段数量。常用的几种方式我给大家慢慢到来。最多的就是在读取每个字段内容 for(i=1;i<=NF;i++) 这个运用非常之多<br/>
+
+a是分割数组
 
 ####spark
 val wordcount=textfile.flatMap(line=>line.split(" ")).map(word=> (word,1)).reduceByKey((a,b)=>(a+b))
