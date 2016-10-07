@@ -28,7 +28,7 @@
    * [Spark配置参数](sparkpei_zhi_can_shu.md)
    * [Spark快速入门指南 – Spark安装与基础使用](sparkkuai_su_ru_men_zhi_nan__spark_an_zhuang_yu_ji.md)
    * [spark测试用例](sparkce_shi_yong_li.md)
-   * 链接总结
+   * [链接总结](lian_jie_zong_jie.md)
 * [kylin](kylin.md)
    * Apache Kylin参考
 * [flume](flume.md)
