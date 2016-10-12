@@ -168,3 +168,6 @@ net.cn
         <activeProfile>nexus</activeProfile>
     </activeProfiles>
 
+###3. maven Maven实战（九）——打包的技巧
+参考：[http://www.infoq.com/cn/news/2011/06/xxb-maven-9-package](http://www.infoq.com/cn/news/2011/06/xxb-maven-9-package)
+###4. maven maven-assembly-plugin 参数配置参考：[http://maven.apache.org/plugins/maven-assembly-plugin/assembly.html](http://maven.apache.org/plugins/maven-assembly-plugin/assembly.html)
