@@ -1,5 +1,6 @@
 # maven
-参考：
+
+##maven镜像配置参考：
 https://yq.aliyun.com/articles/46991
 
 摘要： 综述 用maven做项目，最郁闷的莫过于某些依赖库下载不了。被墙了，你懂的。使用maven镜像仓库及其重要，特别是国内的镜像，可以有效缓解被墙疼痛。 常用的镜像 国外镜像 ibiblio.org <mirror> <id>ibiblio</id> <mirrorOf>c...
