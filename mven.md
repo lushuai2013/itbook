@@ -110,4 +110,61 @@ net.cn
 参考：http://maven.oschina.net/help.html
 
 ###2. maven配置示例
+     
+```  <mirrors> 
+    <mirror>  
+        <id>nexus</id>  
+        <mirrorOf>central</mirrorOf>  
+        <name>Nexus osc</name>  
+        <url>http://maven.aliyun.com/nexus/content/groups/public/</url>  
+    </mirror>  
+    <mirror>  
+        <id>nexus-thirdparty</id>  
+        <mirrorOf>thirdparty</mirrorOf>  
+        <name>Nexus osc thirdparty</name>  
+        <url>http://maven.oschina.net/content/repositories/thirdparty/</url>  
+    </mirror>  
+  </mirrors>```
+  
+  
+     <profiles>
+        <profile>  
+                <id>nexus</id>  
+              
+                <activation>  
+                    <jdk>1.4</jdk>  
+                </activation>  
+              
+                <repositories>  
+                    <repository>  
+                        <id>nexus</id>  
+                        <name>local private nexus</name>  
+                        <url>http://maven.aliyun.com/nexus/content/groups/public/</url>  
+                        <releases>  
+                            <enabled>true</enabled>  
+                        </releases>  
+                        <snapshots>  
+                            <enabled>false</enabled>  
+                        </snapshots>  
+                    </repository>  
+                </repositories>  
+                <pluginRepositories>  
+                    <pluginRepository>  
+                        <id>nexus</id>  
+                        <name>local private nexus</name>  
+                        <url>http://maven.aliyun.com/nexus/content/groups/public/</url>  
+                        <releases>  
+                            <enabled>true</enabled>  
+                        </releases>  
+                        <snapshots>  
+                            <enabled>false</enabled>  
+                        </snapshots>  
+                    </pluginRepository>  
+                </pluginRepositories>  
+          </profile>
+    </profiles>
+
+    <activeProfiles>
+        <activeProfile>nexus</activeProfile>
+    </activeProfiles>
 
