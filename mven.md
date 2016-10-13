@@ -177,4 +177,6 @@ net.cn
 
 ###6. Specify dependencies for Maven classifiers
 [http://blog.csdn.net/lovingprince/article/details/5894459](http://blog.csdn.net/lovingprince/article/details/5894459)
+how tow look for all dependencies pom :
+https://github.com/bh-lushuai/Json-lib
 
