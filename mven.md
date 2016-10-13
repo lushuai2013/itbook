@@ -174,3 +174,7 @@ net.cn
 
 ###5. 使用Maven为一个项目生成多个Jar包
 [http://agiledon.github.io/blog/2013/11/10/create-two-jars-from-one-project-using-maven/](http://agiledon.github.io/blog/2013/11/10/create-two-jars-from-one-project-using-maven/)
+
+###6. Specify dependencies for Maven classifiers
+[http://stackoverflow.com/questions/27000832/specify-dependencies-for-maven-classifiers
+](http://stackoverflow.com/questions/27000832/specify-dependencies-for-maven-classifiers)
