@@ -176,5 +176,5 @@ net.cn
 [http://agiledon.github.io/blog/2013/11/10/create-two-jars-from-one-project-using-maven/](http://agiledon.github.io/blog/2013/11/10/create-two-jars-from-one-project-using-maven/)
 
 ###6. Specify dependencies for Maven classifiers
-[http://stackoverflow.com/questions/27000832/specify-dependencies-for-maven-classifiers
-](http://stackoverflow.com/questions/27000832/specify-dependencies-for-maven-classifiers)
+[http://blog.csdn.net/lovingprince/article/details/5894459](http://blog.csdn.net/lovingprince/article/details/5894459)
+
