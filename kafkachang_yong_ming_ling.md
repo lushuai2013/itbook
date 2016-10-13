@@ -62,3 +62,5 @@ pv              page_visits                    1   0               19           
 pv              page_visits                    2   0               20              20              none
 
 可以看到offset已经被清0，Lag=logSize
+###查看kafka topic列表
+sh kafka-topics.sh  --zookeeper localhost:2181 --list 
