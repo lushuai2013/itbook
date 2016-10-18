@@ -25,3 +25,7 @@ http://debugo.com/idea-spark/ <br/>
  
  ###Google Guava 库用法整理
  http://macrochen.iteye.com/blog/737058
+ 
+ 
+ ###JVM原理讲解和调优
+ http://www.mamicode.com/info-detail-1028149.html
