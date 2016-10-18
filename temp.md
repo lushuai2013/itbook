@@ -21,3 +21,7 @@ http://debugo.com/idea-spark/ <br/>
  
  ###大数据demo
  https://github.com/mapr-demos
+ 
+ 
+ ###Google Guava 库用法整理
+ http://macrochen.iteye.com/blog/737058
