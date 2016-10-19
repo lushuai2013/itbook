@@ -293,6 +293,7 @@ https://github.com/bh-lushuai/Json-lib
     </build>```
 ###8.用maven assembly插件打jar包实现依赖包归档
 参考：[http://blog.csdn.net/e5945/article/details/7777286](http://blog.csdn.net/e5945/article/details/7777286)
+参考： [http://maven.apache.org/plugins-archives/maven-assembly-plugin-2.6/examples/sharing-descriptors.html](http://maven.apache.org/plugins-archives/maven-assembly-plugin-2.6/examples/sharing-descriptors.html)
 ```<plugin>
     <artifactId>maven-assembly-plugin</artifactId>
     <version>2.6</version>
