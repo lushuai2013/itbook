@@ -302,3 +302,64 @@ https://github.com/bh-lushuai/Json-lib
         </descriptorRefs>
     </configuration>
 </plugin>```
+mvn assembly:assembly命令你会在${project}/target 文件夹下发现新生成的 {artifactId}-jar-with-dependencies.jar 这个文件
+在上面的这个 命令执行的过程中，maven会将jar包所依赖的包导出，并且解压（unpackage），一并放在
+这个{artifactId}-jar-with-dependencies.jar 包中
+
+
+各个第三方包单独部署，比如ibatis归ibatis包，spring包归spring包，这样以后单独为某个第三方包升级也比较方便。
+
+这个jar-with-dependencies是assembly预先写好的一个，组装描述引用（assembly descriptor）我们来看一下这个定义这个组装描述（assemly descriptor）的xml文件
+
+```<assembly xmlns="http://maven.apache.org/plugins/maven-assembly-plugin/assembly/1.1.0"  
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"  
+  xsi:schemaLocation="http://maven.apache.org/plugins/maven-assembly-plugin/assembly/1.1.0 http://maven.apache.org/xsd/assembly-1.1.0.xsd">  
+  <id>jar-with-dependencies</id>  
+  <formats>  
+    <format>jar</format>  
+  </formats>  
+  <includeBaseDirectory>false</includeBaseDirectory>  
+  <dependencySets>  
+    <dependencySet>  
+      <unpack>true</unpack>  
+      <scope>runtime</scope>  
+    </dependencySet>  
+  </dependencySets>  
+  <fileSets>  
+    <fileSet>  
+      <directory>${project.build.outputDirectory}</directory>  
+    </fileSet>  
+  </fileSets>  
+</assembly>  ```
+
+在 main/assembly 下创建 src.xml文件，将刚才修改过的内用写入文件中，内容为：
+```<assembly  
+    xmlns="http://maven.apache.org/plugins/maven-assembly-plugin/assembly/1.1.0"  
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"  
+    xsi:schemaLocation="http://maven.apache.org/plugins/maven-assembly-plugin/assembly/1.1.0 http://maven.apache.org/xsd/assembly-1.1.0.xsd">  
+    <id>jar-with-dependencies</id>  
+    <formats>  
+        <format>jar</format>  
+    </formats>  
+    <includeBaseDirectory>false</includeBaseDirectory>  
+    <dependencySets>  
+        <dependencySet>  
+            <unpack>false</unpack>  
+            <scope>runtime</scope>  
+        </dependencySet>  
+    </dependencySets>  
+    <fileSets>  
+        <fileSet>  
+            <directory>${project.build.outputDirectory}</directory>  
+        </fileSet>  
+    </fileSets>  
+</assembly>  ```
+将之前pom.xml 中的plugin改成如下：
+           ```<plugin>  
+                <artifactId>maven-assembly-plugin</artifactId>  
+                <configuration>  
+                    <descriptors>  
+                        <descriptor>src/main/assembly/src.xml</descriptor>  
+                    </descriptors>  
+                </configuration>  
+            </plugin>  ```
