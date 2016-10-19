@@ -10,4 +10,4 @@ http://bit1129.iteye.com/blog/2174673<br/>
 [http://ifeve.com/spark-sql-dataframes/](http://ifeve.com/spark-sql-dataframes/)
 
 ###4. spark1.6 官网翻译
-http://ifeve.com/apache-spark/
+[http://ifeve.com/apache-spark/](http://ifeve.com/apache-spark/)
