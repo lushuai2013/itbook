@@ -4,7 +4,7 @@
    * [MySQL重设root密码](mysqlzhong_she_root_mi_ma.md)
    * [idea使用](ideashi_yong.md)
    * [地址收藏](di_zhi_shou_cang.md)
-   * 总结
+   * [总结](zong_jie.md)
    * [maven](mven.md)
    * [slf4j总结](slf4jzong_jie.md)
    * [temp](temp.md)
