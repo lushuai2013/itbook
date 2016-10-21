@@ -15,4 +15,5 @@ spark.eventLog.enabled	false	是否记录Spark的事件日志。这在应用程�
 
 ###3.Spark on yarn（External Shuffle Service）
 参考：
-http://ifeve.com/spark-schedule/
+[http://spark.apache.org/docs/latest/job-scheduling.html](http://spark.apache.org/docs/latest/job-scheduling.html)
+[http://ifeve.com/spark-schedule/](http://ifeve.com/spark-schedule/)
