@@ -11,5 +11,8 @@ HDFS集群没有采用RAID(冗余磁盘阵列)作为datanodes的存储设备(尽
 最后，当一个JBOD配置中的一个磁盘失效，HDFS可以继续操作；但是在RAID中，一个磁盘的失效将会导致整个阵列(节点也一样)变得不再可用。
 
 翻译自：OReilly Hadoop 《The Definitive Guide》June 2009
+
+###3. Hadoop: Why Not Use RAID?
+https://yq.aliyun.com/articles/43464
    
    
