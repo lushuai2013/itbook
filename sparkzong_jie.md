@@ -43,7 +43,7 @@ spark.eventLog.enabled	false	是否记录Spark的事件日志。这在应用程�
   拷贝“${SPARK_HOME}/lib/spark-1.3.0-yarn-shuffle.jar”到“${HADOOP_HOME}/share/hadoop/yarn/lib/”目录下。
   c. 重启NodeManager进程，也就启动了External shuffle Service。
 
-    2. Spark应用使用External shuffle Service。 
+2. Spark应用使用External shuffle Service。 
 
 在“spark-defaults.conf”中必须添加如下配置项： 
 spark.shuffle.service.enabled true 
