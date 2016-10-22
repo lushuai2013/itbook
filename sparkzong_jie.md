@@ -56,7 +56,7 @@ spark.shuffle.service.enabled   ：NodeManager中一个长期运行的辅助服�
 spark.shuffle.service.port   ：Shuffle服务监听数据获取请求的端口。可选配置，默认值 为“7337”。
 ###4. 配置 Viewing After the Fact
  参考：http://ifeve.com/spark-monitor/
- 开启history server需要如下指令：
+ 如果Spark是运行于Mesos或者YARN上的话，那么你需要开启Spark的history server，开启event log。开启history server需要如下指令：
 
 ```./sbin/start-history-server.sh```
 注意history server 只展示已经结束的Spark作业。一种通知Spark作业结束的方法是，显式地关闭SparkContext（通过调用 sc.stop()，或者在 使用 SparkContext() 处理其 setup 和 tear down 事件（适用于python），然后作业历史就会出现在web UI上了。
