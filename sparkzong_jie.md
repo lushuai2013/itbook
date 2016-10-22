@@ -52,7 +52,7 @@ spark.shuffle.service.port 7337
 1.如果1.如果“yarn.nodemanager.aux-services”配置项已存在，则在value中添加 “spark_shuffle”，且用逗号和其他值分开。 
 2.“spark.shuffle.service.port”的值需要和上面“yarn-site.xml”中的值一样。 
 配置参数描述 
-spark.shuffle.service.enabled   ：NodeManager中一个长期运行的辅助服务，用于提升Shuffle 计算性能。默认为false，表示不启用该功能。 
+spark.shuffle.service.enabled   ：NodeManager中一个长期运行的辅助服务，用于提升Shuffle 计算性能。默认为false，表示不启用该功能。 cank
 spark.shuffle.service.port   ：Shuffle服务监听数据获取请求的端口。可选配置，默认值 为“7337”。
 ###4. 配置 Viewing After the Fact
- 
+ 参考：http://ifeve.com/spark-monitor/
