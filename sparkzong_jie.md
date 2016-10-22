@@ -56,4 +56,6 @@ spark.shuffle.service.enabled   ：NodeManager中一个长期运行的辅助服�
 spark.shuffle.service.port   ：Shuffle服务监听数据获取请求的端口。可选配置，默认值 为“7337”。
 ###4. 配置 Viewing After the Fact
  参考：http://ifeve.com/spark-monitor/
- 
+ 开启history server需要如下指令：
+
+```./sbin/start-history-server.sh```
