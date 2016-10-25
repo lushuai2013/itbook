@@ -10,5 +10,7 @@
   [http://ifeve.com/](http://ifeve.com/)
  包括：httpclient,zookeeper,spring_boot,缓存穿透、缓存并发、缓存失效之思路变迁等所有編程知識。
 
+###4.《Spring Boot官方指南》（二）入门
+参考：[http://ifeve.com/spring-boot-2/](http://ifeve.com/spring-boot-2/)
   
 
