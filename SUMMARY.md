@@ -8,7 +8,6 @@
    * [maven](mven.md)
    * [slf4j总结](slf4jzong_jie.md)
    * [temp](temp.md)
-   * [阿里Druid数据库监控](a_li_druid_shu_ju_ku_jian_kong.md)
 * [Java多线程](javaduo_xian_cheng.md)
    * [Java concurrency – CountDownLatch Example](java_concurrency__countdownlatch_example.md)
 * [性能测试](xing_neng_ce_shi.md)
@@ -59,5 +58,6 @@
 * [storm](storm.md)
    * storm总结
 * 阿里
+   * [阿里Druid数据库监控](a_li_druid_shu_ju_ku_jian_kong.md)
    * dubbo总结
 
