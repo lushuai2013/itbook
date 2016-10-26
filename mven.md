@@ -366,7 +366,7 @@ mvn assembly:assembly命令你会在${project}/target 文件夹下发现新生�
             </plugin>  ```
             
 ###9.  解决在IDEA14 的Maven下 出现 Cannot access in offline mode 问题
-Working in Offline Mode   :
+Working in Offline Mode   :[https://www.jetbrains.com/help/idea/2016.2/working-in-offline-mode.html](https://www.jetbrains.com/help/idea/2016.2/working-in-offline-mode.html)
 On each launch, Maven visits the remote repositories and checks for updates. Executing a Maven command can result in downloading new archives and changing Maven itself. When you switch to offline mode, Maven has to use those resources that are available locally, and report about the problems, if something is missing.
 
 The offline mode is helpful, when you need to work offline, or when your network connection is slow.
