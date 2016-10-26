@@ -370,3 +370,4 @@ Working in Offline Mode   :[https://www.jetbrains.com/help/idea/2016.2/working-i
 On each launch, Maven visits the remote repositories and checks for updates. Executing a Maven command can result in downloading new archives and changing Maven itself. When you switch to offline mode, Maven has to use those resources that are available locally, and report about the problems, if something is missing.
 
 The offline mode is helpful, when you need to work offline, or when your network connection is slow.
+
