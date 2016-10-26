@@ -372,3 +372,7 @@ On each launch, Maven visits the remote repositories and checks for updates. Exe
 The offline mode is helpful, when you need to work offline, or when your network connection is slow.
 
 解决方法：http://blog.csdn.net/lisq037/article/details/43935165
+
+
+###9. 
+参考   https://github.com/bh-lushuai/dubbox/tree/master/dubbo-demo/dubbo-demo-consumer/src/main
