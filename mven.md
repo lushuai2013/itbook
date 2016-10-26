@@ -365,4 +365,4 @@ mvn assembly:assembly命令你会在${project}/target 文件夹下发现新生�
                 </configuration>  
             </plugin>  ```
             
-            
+###9.  解决在IDEA14 的Maven下 出现 Cannot access in offline mode 问题
