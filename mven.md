@@ -374,5 +374,5 @@ The offline mode is helpful, when you need to work offline, or when your network
 解决方法：http://blog.csdn.net/lisq037/article/details/43935165
 
 
-###9. 
+###9. maven assembly例子
 参考   https://github.com/bh-lushuai/dubbox/tree/master/dubbo-demo/dubbo-demo-consumer/src/main
