@@ -21,7 +21,7 @@ ls /dubbo/com.znn.provider.DemoService/providers
 [zk: localhost:2181(CONNECTED) 61] ls /dubbo/com.znn.provider.DemoService/routers  
 []
 
-###2. dubbo 
+###2. dubbo 原理解析
 [http://blog.csdn.net/u010311445/article/category/2745121](http://blog.csdn.net/u010311445/article/category/2745121)
 
 
