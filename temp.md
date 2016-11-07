@@ -43,3 +43,17 @@ http://debugo.com/idea-spark/ <br/>
 
 ###百度云盘搜索
 http://www.sobaidupan.com/
+
+
+###技术选型参考
+jersey -restful
+spring -IOC/DI框架
+dubbox -RPC服务框架
+mybatis-ORM
+codis-redis cluster -redis集群
+shading-jdbc 分库分表
+ mysql- 主从-读写分离-分库分表-shading-jdbc
+ zookeeper-集群管理、服务治理、服务发现
+ redis-集群、分布式锁
+ quartz-定时任务集群
+RocketMQ-MQ方案
