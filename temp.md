@@ -57,3 +57,7 @@ shading-jdbc 分库分表
  redis-集群、分布式锁
  quartz-定时任务集群
 RocketMQ-MQ方案
+
+
+###垂直爬虫框架－WebMagic
+https://www.tianmaying.com/tutorial/99
