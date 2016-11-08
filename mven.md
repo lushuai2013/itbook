@@ -409,7 +409,7 @@ The offline mode is helpful, when you need to work offline, or when your network
     <profiles>
         
           <profile>  
-                <id>gome</id>  
+                <id>gou</id>  
               
                 <activation>  
                     <jdk>1.4</jdk>  
@@ -417,9 +417,9 @@ The offline mode is helpful, when you need to work offline, or when your network
               
                 <repositories>  
                     <repository>  
-                        <id>gome</id>  
+                        <id>gou</id>  
                         <name>local private nexus</name>  
-                        <url>http://10.143.90.39:8081/nexus/content/groups/public/</url>  
+                        <url>http://10.*.*.*:8081/nexus/content/groups/public/</url>  
                         <releases>  
                             <enabled>true</enabled>  
                         </releases>  
@@ -430,9 +430,9 @@ The offline mode is helpful, when you need to work offline, or when your network
                 </repositories>  
                 <pluginRepositories>  
                     <pluginRepository>  
-                        <id>gome</id>  
+                        <id>gou</id>  
                         <name>local private nexus</name>  
-                        <url>http://10.143.90.39:8081/nexus/content/groups/public/</url>  
+                        <url>http://10.*.*.*:8081/nexus/content/groups/public/</url>  
                         <releases>  
                             <enabled>true</enabled>  
                         </releases>  
@@ -445,8 +445,6 @@ The offline mode is helpful, when you need to work offline, or when your network
     </profiles>
 
     <activeProfiles>
-        <activeProfile>gome</activeProfile>
+        <activeProfile>gou</activeProfile>
     </activeProfiles>
-
-   
 </settings>
