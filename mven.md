@@ -391,10 +391,8 @@ The offline mode is helpful, when you need to work offline, or when your network
   </pluginGroups>
   <proxies>
   </proxies>
-
   <servers>
   </servers>
-
 
   <mirrors>
     <mirror>  
@@ -404,17 +402,13 @@ The offline mode is helpful, when you need to work offline, or when your network
         <url>http://maven.aliyun.com/nexus/content/groups/public/</url>  
     </mirror>  
   </mirrors>
-  
  
     <profiles>
-        
           <profile>  
                 <id>gou</id>  
-              
                 <activation>  
                     <jdk>1.4</jdk>  
                 </activation>  
-              
                 <repositories>  
                     <repository>  
                         <id>gou</id>  
