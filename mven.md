@@ -376,3 +376,77 @@ The offline mode is helpful, when you need to work offline, or when your network
 
 ###9. maven assembly例子
 参考   https://github.com/bh-lushuai/dubbox/tree/master/dubbo-demo/dubbo-demo-consumer/src/main
+
+###10. guo配置私服示例
+
+<?xml version="1.0" encoding="UTF-8"?>
+
+<settings xmlns="http://maven.apache.org/SETTINGS/1.0.0" 
+          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+          xsi:schemaLocation="http://maven.apache.org/SETTINGS/1.0.0 http://maven.apache.org/xsd/settings-1.0.0.xsd">
+
+  <localRepository>D:\softs\m2</localRepository>
+ 
+  <pluginGroups>
+  </pluginGroups>
+  <proxies>
+  </proxies>
+
+  <servers>
+  </servers>
+
+
+  <mirrors>
+    <mirror>  
+        <id>nexus</id>  
+        <mirrorOf>central</mirrorOf>  
+        <name>Nexus osc</name>  
+        <url>http://maven.aliyun.com/nexus/content/groups/public/</url>  
+    </mirror>  
+  </mirrors>
+  
+ 
+    <profiles>
+        
+          <profile>  
+                <id>gome</id>  
+              
+                <activation>  
+                    <jdk>1.4</jdk>  
+                </activation>  
+              
+                <repositories>  
+                    <repository>  
+                        <id>gome</id>  
+                        <name>local private nexus</name>  
+                        <url>http://10.143.90.39:8081/nexus/content/groups/public/</url>  
+                        <releases>  
+                            <enabled>true</enabled>  
+                        </releases>  
+                        <snapshots>  
+                            <enabled>false</enabled>  
+                        </snapshots>  
+                    </repository>  
+                </repositories>  
+                <pluginRepositories>  
+                    <pluginRepository>  
+                        <id>gome</id>  
+                        <name>local private nexus</name>  
+                        <url>http://10.143.90.39:8081/nexus/content/groups/public/</url>  
+                        <releases>  
+                            <enabled>true</enabled>  
+                        </releases>  
+                        <snapshots>  
+                            <enabled>false</enabled>  
+                        </snapshots>  
+                    </pluginRepository>  
+                </pluginRepositories>  
+          </profile>
+    </profiles>
+
+    <activeProfiles>
+        <activeProfile>gome</activeProfile>
+    </activeProfiles>
+
+   
+</settings>
