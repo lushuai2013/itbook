@@ -64,3 +64,11 @@ pv              page_visits                    2   0               20           
 可以看到offset已经被清0，Lag=logSize
 ###查看kafka topic列表
 sh kafka-topics.sh  --zookeeper localhost:2181 --list 
+
+###kafka删除topic
+kafka-topics.sh --delete --zookeeper localhost:2181 --topic your_topic_name
+
+  Topic your_topic_name is marked for deletion.
+  Note: This will have no impact if delete.topic.enable is not set to true.
+  
+参考：http://stackoverflow.com/questions/24287900/delete-topic-in-kafka-0-8-1-1
