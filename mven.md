@@ -442,3 +442,7 @@ The offline mode is helpful, when you need to work offline, or when your network
         <activeProfile>gou</activeProfile>
     </activeProfiles>
 </settings>
+
+
+###11 .  Maven生成可以直接运行的jar包的多种方式 
+http://blog.csdn.net/xiao__gui/article/details/47341385
