@@ -64,3 +64,6 @@ RocketMQ-MQ方案
 
 ### Spark On YARN内存分配
 http://www.tuicool.com/articles/YVFVRf3
+
+###spark动态资源分配在yarn（hadoop）的配置
+ http://blog.sina.com.cn/s/blog_a29dec8d0102vfwx.html
