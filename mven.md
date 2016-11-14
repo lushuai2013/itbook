@@ -446,3 +446,15 @@ The offline mode is helpful, when you need to work offline, or when your network
 
 ###11 .  Maven生成可以直接运行的jar包的多种方式 
 http://blog.csdn.net/xiao__gui/article/details/47341385
+
+
+###12. Maven插件声明顺序的微妙差别 
+某个项目需要这样进行package操作：
+
+    1.通过maven-jar-plugin率先得到本项目的jar包，之所以显式地配置jar插件是因为要排除掉一些不必要的文件
+    2.紧接着，使用maven-shade-plugin,把项目的jar包和其依赖的jar打成一个all-in-one的大jar包。这并不是一种优雅的处理方式，但是限于某些环境的特殊需求，你可能必须这样选择
+    3.最后，使用maven-assembly-plugin把最终得到的all-in-one的jar包和一些shell文件以及配置文件按照通常的组织方式（比如bin,lib,conf等文件夹）打包成一个分发包
+
+插一句题外话，有人可能会在看到项目中同时使用jar,shade,assembly这三个package插件时感到惶恐，实际上从我的实践经验来看，这三个插件有各自的侧重点和擅长的问题域，不存在谁替代谁的问题，而是要根据项目需要组合使用。jar是狭义的jar文件打包工具，最终交付的就是一个单一的包含了项目classes的jar包，shade则是侧重于合并依赖jar包生成一个all-in-one的jar包方面，而assembly虽然具有一定的合并依赖jar包的打包能力，但是它在这方面不如shade强大，它的主要强项在于构建一个具有特定目录结构和资源文件的分发包。
+
+具体参考：http://blog.csdn.net/bluishglc/article/details/50380880
