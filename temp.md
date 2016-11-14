@@ -61,3 +61,6 @@ RocketMQ-MQ方案
 
 ###垂直爬虫框架－WebMagic
 [https://www.tianmaying.com/tutorial/99](https://www.tianmaying.com/tutorial/99)
+
+### Spark On YARN内存分配
+http://www.tuicool.com/articles/YVFVRf3
