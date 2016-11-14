@@ -69,3 +69,4 @@ http://www.tuicool.com/articles/YVFVRf3
  http://blog.sina.com.cn/s/blog_a29dec8d0102vfwx.html
  
 ### Spark动态资源分配-Dynamic Resource Allocation 
+http://blog.csdn.net/javastart/article/details/50674043
