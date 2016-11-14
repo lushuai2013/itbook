@@ -67,3 +67,5 @@ http://www.tuicool.com/articles/YVFVRf3
 
 ###spark动态资源分配在yarn（hadoop）的配置
  http://blog.sina.com.cn/s/blog_a29dec8d0102vfwx.html
+ 
+### Spark动态资源分配-Dynamic Resource Allocation 
